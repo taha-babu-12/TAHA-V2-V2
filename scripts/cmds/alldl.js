@@ -22,7 +22,7 @@ module.exports = {
   config: {
     name: "alldl",
     version: "2.0",
-    author: "SiFu",
+    author: "TAHA KHAN",
     role: 0,
     shortDescription: "All-in-one video/media downloader",
     longDescription:
@@ -82,7 +82,7 @@ module.exports = {
       ❒  ᴅʟ ᴄᴏᴍᴘʟᴇᴛᴇ
       ❒  ᴘʟαᴛꜰᴏʀᴍ: ${platformName}
       ❒   sᴛᴀᴛᴜs : sᴜᴄᴄᴇss
-      ❒  ᴏᴡɴᴇʀ: ꜱɪꜰᴜ
+      ❒  ᴏᴡɴᴇʀ: ᴛᴀʜᴀ ᴋʜᴀɴ
 
        ✨ 𝐄𝐧𝐣𝐨𝐲 𝐲𝐨𝐮𝐫 𝐦𝐞𝐝𝐢𝐚!
 ━━━━━━━━━━━━━━━━━━━━
