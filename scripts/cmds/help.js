@@ -27,7 +27,7 @@ module.exports = {
     name: "help",
     aliases: ["menu"],
     version: "6.0",
-    author: "𝐒𝐈𝐅𝐀𝐓",
+    author: "TAHA KHAN",
     shortDescription: "Show all available commands",
     longDescription: "Displays a categorized command list with a rotating video (different every time).",
     category: "system",
