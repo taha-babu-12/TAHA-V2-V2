@@ -3,7 +3,7 @@ const os   = require("os");
 const fs   = require("fs-extra");
 const path = require("path");
 
-const DEVELOPER   = "SIFAT";
+const DEVELOPER   = "TAHA KHAN";
 const BOT_VERSION = "v1.0";
 
 const CYAN    = "#00e5ff";
@@ -393,7 +393,7 @@ async function drawCard(d) {
   ctx.fillText("⚡  ALL SYSTEMS NOMINAL  —  BOT IS ALIVE & RUNNING  ⚡", W / 2, BOT_TXT);
   noGl(ctx); ctx.restore();
 
-  const now = new Date().toLocaleString("en-GB", { timeZone: "Asia/Dhaka", hour12: false });
+  const now = new Date().toLocaleString("en-GB", { timeZone: "Asia/Karachi", hour12: false });
   ctx.save();
   ctx.fillStyle  = "rgba(90,143,168,0.65)";
   ctx.font       = "10px monospace";
@@ -421,7 +421,7 @@ module.exports = {
     name: "uptime",
     aliases: ["ut", "status", "ping", "alive"],
     version: "1.0.0",
-    author: "SIFAT",
+    author: "𝐓𝐀𝐇𝐀 𝐊𝐇𝐀𝐍",
     countDown: 5,
     role: 0,
     description: { en: "Advanced system & bot status card" },
