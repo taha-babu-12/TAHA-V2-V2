@@ -1,30 +1,24 @@
-const axios = require("axios");
-const fs = require("fs-extra");
-const request = require("request");
 module.exports = {
-	config: {
-		name: "out",
-		aliases: ["vag","urjaa"],
-		version: "1.0",
-		author: "SiFu",
-		countDown: 5,
-		role: 2,
-		shortDescription: "bot will leave gc",
-		longDescription: "",
-		category: "admin",
-		guide: {
-			vi: "{pn} [tid,blank]",
-			en: "{pn} [tid,blank]"
-		}
-	},
+ config: {
+ name: "out",
+ author: "Siam Ahmed Saan",
+ role: 2, 
+ shortDescription: "Make the bot leave the group",
+ category: "admin",
+ guide: "{pn}"
+ },
 
-	onStart: async function ({ api,event,args, message }) {
- var id;
- if (!args.join(" ")) {
- id = event.threadID;
- } else {
- id = parseInt(args.join(" "));
+ onStart: async function ({ api, event }) {
+ const threadID = event.threadID;
+
+ // Check if it's a group chat
+ const threadInfo = await api.getThreadInfo(threadID);
+ if (!threadInfo.isGroup) {
+ return api.sendMessage("❌ This command can only be used in group chats.", threadID);
  }
- return api.sendMessage('✦━━━━━━━━━━━━━━━✦\n📛 𝗵𝗼 𝗷𝗮𝗰𝗰𝗶 𝘁𝘂𝗶 𝘁𝗵𝗮𝗸 𝗵𝗮𝗹𝗮 🐤\n✦━━━━━━━━━━━━━━━✦', id, () => api.removeUserFromGroup(api.getCurrentUserID(), id))
-		}
-	};
+
+ await api.sendMessage("👋 Goodbye! I'm leaving this group now...", threadID, () => {
+ api.removeUserFromGroup(api.getCurrentUserID(), threadID);
+ });
+ }
+};
